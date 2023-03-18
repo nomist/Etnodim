@@ -1,0 +1,31 @@
+{
+  "name": "etnodim",
+  "version": "1.0.0",
+  "description": "Diploma project at the course of front-end development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomist/Etnodim.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "scss",
+    "bootstrap",
+    "gulp"
+  ],
+  "author": "Taisiia Simon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nomist/Etnodim/issues"
+  },
+  "homepage": "https://github.com/nomist/Etnodim#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.59.3"
+  }
+}

@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const postcss = require('gulp-postcss');
 const browserSync = require('browser-sync').create();
 
 gulp.task('html', () => {
@@ -13,8 +14,18 @@ gulp.task('img', () => {
 });
 
 gulp.task('style', () => {
+    const plugins = [
+        require('postcss-import')(),
+        require('postcss-nested')(),
+        require('autoprefixer')(),
+        require('cssnano')()
+    ];
     return gulp.src('src/style/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
+        .pipe(sass({
+            includePaths: ['node_modules']
+        }))
+        .pipe(postcss(plugins))
         .pipe(gulp.dest('dest/style/'));
 });
 

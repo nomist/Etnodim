@@ -1,14 +1,1 @@
-$red: #ff0000;
-$blue: #d6d6ff;
-
-.h1 {
-    color: $red;
-}
-
-body {
-    background-color: $blue;
-}
-
-p {
-    color: $red;
-}
+@import 'normalize.css';

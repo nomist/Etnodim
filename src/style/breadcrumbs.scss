@@ -1,0 +1,40 @@
+@import '_colors.scss';
+@import '_mixins.scss';
+
+.breadcrumbs {
+    margin: 10px 0;
+    list-style: none;
+    padding: 0;
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        @include text-note-higlight;
+        margin-right: 35px;
+
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+
+        &-active {
+            @include text-note;
+        }
+
+        :hover {
+            color: $pink;
+        }
+
+        ::after {
+            display: inline-block;
+            content: '';
+            width: 25px;
+            height: 1px;
+            background-color: $black;
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

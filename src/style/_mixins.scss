@@ -1,0 +1,23 @@
+@mixin text-paragraph {
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    text-decoration: none;
+    font-variant-numeric: lining-nums;
+}
+
+@mixin text-note-higlight {
+    font-family: Raleway-Bold, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    text-decoration: none;
+    font-variant-numeric: lining-nums;
+}
+
+@mixin text-note {
+    font-family: Raleway-Light, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    text-decoration: none;
+    font-variant-numeric: lining-nums;
+}

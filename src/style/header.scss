@@ -1,0 +1,21 @@
+.logo {
+    margin: 0 auto;
+}
+
+.product-card {
+    border: none;
+
+    img {
+        max-width: 520px;
+        max-height: 500px;
+        border-radius: 0;
+    }
+}
+
+.card-body {
+    padding: 10px 0;
+}
+
+// .breadcrumb-item {
+//     @include paragraph;
+// }

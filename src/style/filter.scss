@@ -1,0 +1,50 @@
+@import '_colors.scss';
+@import '_mixins.scss';
+
+.filter {
+
+}
+
+.filter__accordion {
+    
+    &-body {
+        padding: 0;
+    }
+
+    &-item {
+        box-shadow: none;
+        border: none;
+        margin-bottom: 5px;
+    }
+
+    &-item-header {
+        // doesnt work
+        background: $white;
+    }
+
+    &-item-button {
+        padding: 5px 0;
+        background: none;
+        @include text-note-higlight;
+        width: auto;
+
+        &::after {
+            background-image: url(/img/icons/chevron.svg);
+        }
+
+        &:not(.collapsed) {
+            background: none;
+            box-shadow: none;
+            color: $black;
+
+            &::after {
+                background-image: url(/img/icons/chevron.svg);
+            }
+        }
+
+        &:focus {
+            border-color: none;
+            box-shadow: none;
+        }
+    }
+}

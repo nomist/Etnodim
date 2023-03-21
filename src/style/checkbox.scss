@@ -1,0 +1,26 @@
+@import '_colors.scss';
+@import '_mixins.scss';
+
+.checkbox {
+
+    margin-bottom: 0px;
+
+    &__selector[type=checkbox] {
+        border: 1px solid $gray-dark;
+        border-radius: 0px;
+    }
+
+    &__selector:checked {
+        background-color: $pink;
+        border-color: $pink;
+    }
+
+    &__selector:focus {
+        box-shadow: none;
+    }
+
+    &__label {
+        @include text-note;
+        color: $black;
+    }
+}

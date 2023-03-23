@@ -1,0 +1,30 @@
+@import '_colors.scss';
+@import '_mixins.scss';
+
+.products__pagination {
+
+    &-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &-link {
+        @include text-paragraph-bold;
+        color: $black;
+        border: none;
+        border-radius: 0;
+        padding: 5px;
+
+        &:hover {
+            color: $pink;
+        }
+    }
+
+    &-link-disabled {
+        color: $gray;
+    }
+}

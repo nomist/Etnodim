@@ -1,0 +1,23 @@
+@import '_colors.scss';
+@import '_mixins.scss';
+
+.products__foooter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+
+    .products__pagination {
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .products__pagination {
+        display: none;
+    }
+}

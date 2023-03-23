@@ -1,0 +1,45 @@
+@import '_colors.scss';
+@import '_mixins.scss';
+
+.button {
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &__icon {
+        padding: 10px;
+        border: none;
+        
+        &::before {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__with-icon {
+        @include text-paragraph-bold;
+        text-transform: uppercase;
+        text-decoration: underline;
+        height: 50px;
+        padding: 10px 50px 10px 25px;
+        position: relative;
+        border: none;
+        background-color: transparent;
+        color: $black;
+
+        &:hover {
+            color: $pink;
+        }
+        
+        &::before {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 25px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+

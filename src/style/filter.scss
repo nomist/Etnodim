@@ -2,49 +2,71 @@
 @import '_mixins.scss';
 
 .filter {
+    &__accordion {
 
-}
-
-.filter__accordion {
-    
-    &-body {
-        padding: 0;
-    }
-
-    &-item {
-        box-shadow: none;
-        border: none;
-        margin-bottom: 5px;
-    }
-
-    &-item-header {
-        // doesnt work
-        background: $white;
-    }
-
-    &-item-button {
-        padding: 5px 0;
-        background: none;
-        @include text-note-higlight;
-        width: auto;
-
-        &::after {
-            background-image: url(/img/icons/chevron.svg);
+        &-body {
+            padding: 0;
         }
 
-        &:not(.collapsed) {
-            background: none;
+        &-item {
             box-shadow: none;
-            color: $black;
+            border: none;
+            margin-bottom: 5px;
+        }
+
+        &-item-button {
+            padding: 5px 0;
+            background: none;
+            @include text-note-higlight;
+            width: auto;
 
             &::after {
-                background-image: url(/img/icons/chevron.svg);
+                width: 16px;
+                height: 16px;
+                background: 100% center url(/img/icons/chevron.svg);
             }
-        }
 
-        &:focus {
-            border-color: none;
-            box-shadow: none;
+            &:not(.collapsed) {
+                background: none;
+                box-shadow: none;
+                color: $black;
+
+                &::after {
+                    width: 16px;
+                    height: 16px;
+                    background: 100% center url(/img/icons/chevron.svg);
+                }
+            }
+
+            &:focus {
+                border-color: none;
+                box-shadow: none;
+            }
         }
     }
 }
+
+.m-filter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+
+    &__section {
+        width: calc(50% - 5px);
+
+        &-title {
+            @include text-note-higlight;
+            color: $black;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .filter {
+        display: none;
+    }
+ }

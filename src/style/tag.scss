@@ -1,0 +1,15 @@
+@import '_colors.scss';
+@import '_mixins.scss';
+
+.tag {
+    background-color: $pink;
+    padding: 0 3px;
+    @include text-tag;
+    color: $white;
+    display: inline-block;
+    height: 15px;
+    min-width: 15px;
+    border-radius: 50%;
+    margin: 0;
+    text-align: center;
+}

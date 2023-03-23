@@ -1,0 +1,129 @@
+@import '_colors.scss';
+@import '_mixins.scss';
+
+.footer {
+    position: relative;
+    margin-top: 50px;
+    padding: 70px 75px 90px;
+    background-color: $gray-surface;
+
+    &__scroll {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -30px;
+
+        &::before {
+            display: block;
+            content: '';
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &__section {
+        list-style: none;
+        margin: 0;
+    }
+
+    &__link {
+        @include text-paragraph;
+        color: $black;
+        text-decoration: none;
+        padding: 5px;
+
+        &-underline {
+            text-decoration: underline;
+        }
+    }
+
+    &__copywriting {
+        @include text-paragraph;
+        color: $black;
+        text-decoration: none;
+        margin: 30px 0 0;
+        padding: 5px;
+    }
+
+    &__workinghours {
+        @include text-paragraph;
+        color: $black;
+        text-decoration: none;
+        display: inline-block;
+        padding: 5px;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 5px;
+
+        &-link {
+            &::before {
+                display: block;
+                content: '';
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    &__link-highlight {
+        @include text-paragraph-bold;
+        color: $pink;
+    }
+
+    &__item-highlight {
+        margin-top: 20px;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        width: 100%;
+        height: 15px;
+    }
+
+    &__logo-img {
+        max-height: 100%;
+        object-fit: cover;
+    }
+}
+
+.m-footer__section-contacts {
+    margin-top: 20px;
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .footer__section-contacts {
+        display: none;
+    }
+
+    .footer {
+        padding: 40px 10px 20px;
+
+        &__scroll {
+
+            top: -15px;
+
+            &::before {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .m-footer__section-contacts {
+        display: block;
+    }
+}

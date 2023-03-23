@@ -1,77 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style/style.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Каталог</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Знижки</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Блог</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link">Про нас</a>
-                  </li>
-                  <li class="nav-item logo">
-                    <a class="navbar-brand" href="#">Logo</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      UA
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Armenia</a></li>
-                        <li><a class="dropdown-item" href="#">Brazil</a></li>
-                        <li><a class="dropdown-item" href="#">China</a></li>
-                        <li><a class="dropdown-item" href="#">Norway</a></li>
-                        <li><a class="dropdown-item active" href="#">Ukraine</a></li>
-                        <li><a class="dropdown-item" href="#">United Kingdom</a></li>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="/style/style.css">
+    </head>
+    <body>
+        <header class="header" id="header">
+        <nav class="navbar navbar-expand-lg header__container">
+            <div class="container-fluid header__container-wrapper">
+                <div class="m-header__nav">
+                    <ul class="m-header__nav-list">
+                        <li>
+                            <button class="navbar-toggler button button__icon m-header__burger icon__burger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+                        </li>
+                        <li class="m-header__nav-logo">
+                            <a href="index.html">
+                                <img src="/img/logo.svg" alt="Etnodim online shop">
+                            </a>
+                        </li>
+                        <li>
+                            <button class="btn button__icon icon__search" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+                        </li>
+                        <li>
+                            <a class="button__icon icon__cart header__nav-cart" href="cart.html" type="button">
+                                <p class="tag header__nav-tag">1</p>
+                            </a>
+                        </li>
                     </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ₴
+                    
+                    <div class="collapse m-header__nav-menu" id="navbarSupportedContent">
+                        <ul class="m-header__nav-menu-list">
+                            <li class="m-header__nav-item-highlight">
+                                <a class="m-header__nav-link m-header__nav-link-active" href="catalogue.html">Каталог</a>
+                            </li>
+                            <li class="m-header__nav-item-highlight">
+                                <a class="m-header__nav-link" href="catalogue.html">Знижки</a>
+                            </li>
+                            <li class="m-header__nav-item-highlight">
+                                <a class="m-header__nav-link" href="catalogue.html">Блог</a>
+                            </li>
+                            <li class="m-header__nav-item-highlight">
+                                <a class="m-header__nav-link" href="catalogue.html">Про нас</a>
+                            </li>
+                        </ul>
+                        <ul class="m-header__nav-menu-list m-header__nav-menu-switchers">
+                            <li class="m-header__nav-item">
+                                <a class="m-header__nav-link" href="">UA</a>
+                            </li>
+                            <li class="m-header__nav-item">
+                                <a class="m-header__nav-link" href="">RU</a>
+                            </li>
+                            <li class="m-header__nav-item">
+                                <a class="m-header__nav-link" href="">EN</a>
+                            </li>
+                            <hr class="m-header__nav-divider">
+                            <li class="m-header__nav-item">
+                                <a class="m-header__nav-link" href="">₴</a>
+                            </li>
+                            <li class="m-header__nav-item">
+                                <a class="m-header__nav-link" href="">$</a>
+                            </li>
+                            <li class="m-header__nav-item">
+                                <a class="m-header__nav-link" href="">€</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="collapse navbar-collapse header__nav">
+                <ul class="navbar-nav mb-2 mb-lg-0 header__nav-list">
+                  <li class="dropdown header__nav-item header__nav-item-active">
+                    <a class="dropdown-toggle header__nav-link" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Каталог</a>
+                    <div class="dropdown-menu container-fluid header__nav-dropdown">
+                        <div class="row header__nav-dropdown-container">
+                            <ul class="col-2 header__nav-dropdown-section">
+                                <li class="header__nav-dropdown-item header__nav-dropdown-item-category">
+                                    <a class="header__nav-dropdown-link header__nav-dropdown-link-higlight header__nav-dropdown-link-higlight-active" href="#">жінкам</a>
+                                </li>
+                                <li class="header__nav-dropdown-item" header__nav-dropdown-item-category>
+                                    <a class="header__nav-dropdown-link header__nav-dropdown-link-higlight" href="#">чоловікам</a>
+                                </li>
+                                <li class="header__nav-dropdown-item header__nav-dropdown-item-category">
+                                    <a class="header__nav-dropdown-link header__nav-dropdown-link-higlight" href="#">дітям</a>
+                                </li>
+                                <li class="header__nav-dropdown-item header__nav-dropdown-item-category">
+                                    <a class="header__nav-dropdown-link header__nav-dropdown-link-higlight" href="#">аксесуари</a>
+                                </li>
+                                <li class="header__nav-dropdown-item header__nav-dropdown-item-category">
+                                    <a class="header__nav-dropdown-link header__nav-dropdown-link-higlight" href="#">дім</a>
+                                </li>
+                            </ul>
+                            <ul class=" col-3 header__nav-dropdown-section">
+                                <li class="header__nav-dropdown-item">
+                                    <a class="header__nav-dropdown-link" href="">Вишиті сукні</a>
+                                </li>
+                                <li class="header__nav-dropdown-item">
+                                    <a class="header__nav-dropdown-link header__nav-dropdown-link-active" href="">Жіночі вишиванки</a>
+                                </li>
+                                <li class="header__nav-dropdown-item">
+                                    <a class="header__nav-dropdown-link" href="">Конструктор вишиванки</a>
+                                </li>
+                            </ul>
+                            <ul class=" col-3 header__nav-dropdown-section">
+                                <li class="header__nav-dropdown-item">
+                                    <a class="header__nav-dropdown-link" href="">Світшоти та светри</a>
+                                </li>
+                                <li class="header__nav-dropdown-item">
+                                    <a class="header__nav-dropdown-link" href="">Футболки</a>
+                                </li>
+                                <li class="header__nav-dropdown-item">
+                                    <a class="header__nav-dropdown-link" href="">Брюки та комбінезони</a>
+                                </li>
+                            </ul>
+                            <ul class="col-2 header__nav-dropdown-section">
+                                <li class="header__nav-dropdown-item"><a class="header__nav-dropdown-link" href="">Пальта та куртки</a></li>
+                                <li class="header__nav-dropdown-item"><a class="header__nav-dropdown-link" href="">Спідниці</a></li>
+                            </ul>
+                            <div class="col-2 header__nav-dropdown-img-container">
+                                <img class="header__nav-dropdown-img" src="/img/header-dropdown.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="header__nav-item">
+                        <a class="header__nav-link" href="#">Знижки</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a class="header__nav-link" href="#">Блог</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a class="header__nav-link">Про нас</a>
+                    </li>
+                    <li class="header__nav-logo">
+                        <a href="index.html">
+                            <img src="/img/logo.svg" alt="Etnodim online shop">
+                        </a>
+                    </li>
+                    <li class="dropdown header__nav-item header__nav-item-selector icon__chevron">
+                        <a class="dropdown-toggle header__nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            UA
+                        </a>
+                        <ul class="dropdown-menu header__nav-item-selector-dropdown">
+                            <li><a class="dropdown-item" href="#">Armenia</a></li>
+                            <li><a class="dropdown-item" href="#">Brazil</a></li>
+                            <li><a class="dropdown-item" href="#">China</a></li>
+                            <li><a class="dropdown-item" href="#">Norway</a></li>
+                            <li><a class="dropdown-item active" href="#">Ukraine</a></li>
+                            <li><a class="dropdown-item" href="#">United Kingdom</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown header__nav-item header__nav-item-selector icon__chevron">
+                        <a class="dropdown-toggle header__nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ₴
+                        </a>
+                        <ul class="dropdown-menu header__nav-item-selector-dropdown">
+                            <li><a class="dropdown-item" href="#">Armenia</a></li>
+                            <li><a class="dropdown-item" href="#">Brazil</a></li>
+                            <li><a class="dropdown-item" href="#">China</a></li>
+                            <li><a class="dropdown-item" href="#">Norway</a></li>
+                            <li><a class="dropdown-item active" href="#">Ukraine</a></li>
+                            <li><a class="dropdown-item" href="#">United Kingdom</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-item">
+                        <a class="header__nav-link" href="tel:+380978889292">+38 097 888 92 92</a>
+                    </li>
+                </ul>   
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                          </form>
+                    </div>
+                  </div>
+                    <button class="btn button__icon icon__search" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+                    <a class="button__icon icon__cart header__nav-cart" href="cart.html" type="button">
+                        <p class="tag header__nav-tag">1</p>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Armenia</a></li>
-                        <li><a class="dropdown-item" href="#">Brazil</a></li>
-                        <li><a class="dropdown-item" href="#">China</a></li>
-                        <li><a class="dropdown-item" href="#">Norway</a></li>
-                        <li><a class="dropdown-item active" href="#">Ukraine</a></li>
-                        <li><a class="dropdown-item" href="#">United Kingdom</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="tel:+380978889292">+38 097 888 92 92</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
               </div>
             </div>
           </nav>
-    </header>
+        </header>
 
-    <section class="container">
+        <section class="container">
         <nav>
             <ol class="breadcrumbs">
                 <li class="breadcrumbs__item"><a href="index.html">Головна</a></li>
@@ -79,295 +195,530 @@
                 <li class="breadcrumbs__item breadcrumbs__item-active" aria-current="page">Жіночі вишиванки</li>
             </ol>
         </nav>
-    </section>
+        </section>
 
-    <section class="container">
-        <div class="row justify-content-start">
-        <div class="filter col-2">
-            <div class="accordion accordion-flush filter__accordion" id="accordionPanelsStayOpenExample">
-                <div class="accordion-item filter__accordion-item">
-                    <h2 class="accordion-header filter__accordion-item-header" id="panelsStayOpen-headingOne">
-                        <button class="accordion-button filter__accordion-item-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                            Розмір
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                        <div class="accordion-body filter__accordion-body">
+        <section class="container">
+            <div class="row justify-content-start">
+                <div class="filter col-2">
+                    <div class="accordion accordion-flush filter__accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item filter__accordion-item">
+                            <h2 class="accordion-header filter__accordion-item-header" id="panelsStayOpen-headingOne">
+                                <button class="accordion-button filter__accordion-item-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    Розмір
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="accordion-body filter__accordion-body">
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="xxs">
+                                        <label class="form-check-label checkbox__label" for="xxs">
+                                            32 | XXS (53)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-xs">
+                                        <label class="form-check-label checkbox__label" for="size-xs">
+                                            34 | XS (60)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-s">
+                                        <label class="form-check-label checkbox__label" for="size-s">
+                                            36 | S (60)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-m">
+                                        <label class="form-check-label checkbox__label" for="size-m">
+                                            38 | M (60)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-l">
+                                        <label class="form-check-label checkbox__label" for="size-l">
+                                            40 | L (60)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-xl">
+                                        <label class="form-check-label checkbox__label" for="size-xl">
+                                            42 | XL (58)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-xxl">
+                                        <label class="form-check-label checkbox__label" for="size-xxl">
+                                            46 | XXL (13)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-xxxl">
+                                        <label class="form-check-label checkbox__label" for="size-xxxl">
+                                            48 | XХXL (4)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item filter__accordion-item">
+                            <h2 class="accordion-header filter__accordion-item-header" id="panelsStayOpen-headingTwo">
+                                <button class="accordion-button filter__accordion-item-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                                    Колір
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body filter__accordion-body">
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="color-white">
+                                        <label class="form-check-label checkbox__label" for="color-white">
+                                            білий (13)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="color-black">
+                                        <label class="form-check-label checkbox__label" for="color-black">
+                                            чорний (8)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="color-biege">
+                                        <label class="form-check-label checkbox__label" for="color-biege">
+                                            бежевий (3)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="color-green">
+                                        <label class="form-check-label checkbox__label" for="color-green">
+                                            зелений (7)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="color-blue">
+                                        <label class="form-check-label checkbox__label" for="color-blue">
+                                            синій (10)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item filter__accordion-item">
+                            <h2 class="accordion-header filter__accordion-item-header" id="panelsStayOpen-headingThree">
+                                <button class="accordion-button filter__accordion-item-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+                                    Сезон
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body filter__accordion-body">
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="season-easy-collection">
+                                        <label class="form-check-label checkbox__label" for="season-easy-collection">
+                                            Easy collection (3)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="season-all">
+                                        <label class="form-check-label checkbox__label" for="season-all">
+                                            усі сезони (46)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item filter__accordion-item">
+                            <h2 class="accordion-header filter__accordion-item-header" id="panelsStayOpen-headingFour">
+                                <button class="accordion-button filter__accordion-item-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
+                                    Тканина
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                                <div class="accordion-body filter__accordion-body">
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="fabric-linen">
+                                        <label class="form-check-label checkbox__label" for="fabric-linen">
+                                            льон (60)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="fabric-satin">
+                                        <label class="form-check-label checkbox__label" for="fabric-satin">
+                                            сатин (1)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item filter__accordion-item">
+                            <h2 class="accordion-header filter__accordion-item-header" id="panelsStayOpen-headingFive">
+                                <button class="accordion-button filter__accordion-item-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="true" aria-controls="panelsStayOpen-collapseFive">
+                                    Рукав
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                                <div class="accordion-body filter__accordion-body">
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="sleeve-long">
+                                        <label class="form-check-label checkbox__label" for="sleeve-long">
+                                            довгий рукав (49)
+                                        </label>
+                                    </div>
+                                    <div class="form-check checkbox">
+                                        <input class="form-check-input checkbox__selector" type="checkbox" value="" id="sleeve-3/4">
+                                        <label class="form-check-label checkbox__label" for="sleeve-3/4">
+                                            3/4 рукав (11)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10 row-cols-md-12">
+                    <header class="plp__header">
+                        <div class="custom-dropdown">
+                <p class="custom-dropdown__label icon__chevron">Фільтри</p>
+                <input class="custom-dropdown__trigger" type="checkbox">
+                <div class="custom-dropdown__content custom-dropdown__content-filter">
+                    <div class="m-filter">
+                        <div class="m-filter__section">
+                            <p class="m-filter__section-title">Розмір</p>
                             <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="xxs">
-                                <label class="form-check-label checkbox__label" for="xxs">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-size-xxs">
+                                <label class="form-check-label checkbox__label" for="m-size-xxs">
                                     32 | XXS (53)
                                 </label>
                             </div>
                             <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-xs">
-                                <label class="form-check-label checkbox__label" for="size-xs">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-size-xs">
+                                <label class="form-check-label checkbox__label" for="m-size-xs">
                                     34 | XS (60)
                                 </label>
                             </div>
                             <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-s">
-                                <label class="form-check-label checkbox__label" for="size-s">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-size-s">
+                                <label class="form-check-label checkbox__label" for="m-size-s">
                                     36 | S (60)
                                 </label>
                             </div>
                             <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-m">
-                                <label class="form-check-label checkbox__label" for="size-m">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-size-m">
+                                <label class="form-check-label checkbox__label" for="m-size-m">
                                     38 | M (60)
                                 </label>
                             </div>
                             <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-l">
-                                <label class="form-check-label checkbox__label" for="size-l">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-size-l">
+                                <label class="form-check-label checkbox__label" for="m-size-l">
                                     40 | L (60)
                                 </label>
                             </div>
                             <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-xl">
-                                <label class="form-check-label checkbox__label" for="size-xl">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-size-xl">
+                                <label class="form-check-label checkbox__label" for="m-size-xl">
                                     42 | XL (58)
                                 </label>
                             </div>
                             <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-xxl">
-                                <label class="form-check-label checkbox__label" for="size-xxl">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-size-xxl">
+                                <label class="form-check-label checkbox__label" for="m-size-xxl">
                                     46 | XXL (13)
                                 </label>
                             </div>
                             <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="size-xxxl">
-                                <label class="form-check-label checkbox__label" for="size-xxxl">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-size-xxxl">
+                                <label class="form-check-label checkbox__label" for="m-size-xxxl">
                                     48 | XХXL (4)
                                 </label>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="accordion-item filter__accordion-item">
-                    <h2 class="accordion-header filter__accordion-item-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button filter__accordion-item-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
-                            Колір
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                        <div class="accordion-body filter__accordion-body">
+                        <div class="m-filter__section">
+                            <p class="m-filter__section-title">Колір</p>
                             <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="color-white">
-                                <label class="form-check-label checkbox__label" for="color-white">
-                                    білий
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-color-white">
+                                <label class="form-check-label checkbox__label" for="m-color-white">
+                                    білий (13)
                                 </label>
                             </div>
                             <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="color-black">
-                                <label class="form-check-label checkbox__label" for="color-black">
-                                    чорний
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-color-black">
+                                <label class="form-check-label checkbox__label" for="m-color-black">
+                                    чорний (8)
                                 </label>
                             </div>
                             <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="color-biege">
-                                <label class="form-check-label checkbox__label" for="color-biege">
-                                    бежевий
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-color-biege">
+                                <label class="form-check-label checkbox__label" for="m-color-biege">
+                                    бежевий (3)
                                 </label>
                             </div>
                             <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="color-green">
-                                <label class="form-check-label checkbox__label" for="color-green">
-                                    зелений
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-color-green">
+                                <label class="form-check-label checkbox__label" for="m-color-green">
+                                    зелений (7)
                                 </label>
                             </div>
                             <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="color-blue">
-                                <label class="form-check-label checkbox__label" for="color-blue">
-                                    синій
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-color-blue">
+                                <label class="form-check-label checkbox__label" for="m-color-blue">
+                                    синій (10)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="m-filter__section">
+                            <p class="m-filter__section-title">Сезон</p>
+                            <div class="form-check checkbox">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-season-easy-collection">
+                                <label class="form-check-label checkbox__label" for="m-season-easy-collection">
+                                    Easy collection (3)
+                                </label>
+                            </div>
+                            <div class="form-check checkbox">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-season-all">
+                                <label class="form-check-label checkbox__label" for="m-season-all">
+                                    усі сезони (46)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="m-filter__section">
+                            <p class="m-filter__section-title">Тканина</p>
+                            <div class="form-check checkbox">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-fabric-linen">
+                                <label class="form-check-label checkbox__label" for="m-fabric-linen">
+                                    льон (60)
+                                </label>
+                            </div>
+                            <div class="form-check checkbox">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="m-fabric-satin">
+                                <label class="form-check-label checkbox__label" for="m-fabric-satin">
+                                    сатин (1)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="m-filter__section">
+                            <p class="m-filter__section-title">Рукав</p>
+                            <div class="form-check checkbox">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="sleeve-long">
+                                <label class="form-check-label checkbox__label" for="sleeve-long">
+                                    довгий рукав (49)
+                                </label>
+                            </div>
+                            <div class="form-check checkbox">
+                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="sleeve-3/4">
+                                <label class="form-check-label checkbox__label" for="sleeve-3/4">
+                                    3/4 рукав (11)
                                 </label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item filter__accordion-item">
-                    <h2 class="accordion-header filter__accordion-item-header" id="panelsStayOpen-headingThree">
-                        <button class="accordion-button filter__accordion-item-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
-                            Сезон
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                        <div class="accordion-body filter__accordion-body">
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="season-winter">
-                                <label class="form-check-label checkbox__label" for="season-winter">
-                                    зима
-                                </label>
+                        </div>
+                        <div class="sorting">
+                            <label class="sorting__label" for="sorting">Сортувати за:</label>
+                            <select class="selectbox-sm" aria-label="Sorting select" id="sorting">
+                                <option selected>новинки</option>
+                                <option value="1">старі колекції</option>
+                                <option value="2">по назві</option>
+                                <option value="3">від найдешевших</option>
+                                <option value="4">від найдорожчих</option>
+                            </select>
+                        </div>
+                        <h2 class="plp__title">Жіночі вишиванки</h2>
+                    </header>
+                    <div class="row row-cols-2 g-4">
+                        <div class="col">
+                            <div class="product-card">
+                                <div class="product-card__img-container">
+                                    <img src="/img/product-lito.jpg" class="product-card__img" alt="...">
+                                    <img src="/img/product-lito-hover.jpg" class="product-card__img product-card__img-hover" alt="...">
+                                    <img src="/img/plp-product-bg.jpg" class="product-card__bg" alt="...">
+                                </div>
+                                <div class="product-card__body">
+                                    <h5 class="product-card__title">Вишиванка з рослинним орнаментом Lito</h5>
+                                    <p class="product-card__price">2 800 грн.</p>
+                                </div>
                             </div>
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="season-autumn">
-                                <label class="form-check-label checkbox__label" for="season-autumn">
-                                    осінь
-                                </label>
+                        </div>
+                        <div class="col">
+                            <div class="product-card">
+                                <div class="product-card__img-container">
+                                    <img src="/img/product-fialka.jpg" class="product-card__img" alt="...">
+                                    <img src="/img/product-lito-hover.jpg" class="product-card__img product-card__img-hover" alt="...">
+                                    <img src="/img/plp-product-bg.jpg" class="product-card__bg" alt="...">
+                                </div>
+                                <div class="product-card__body">
+                                    <h5 class="product-card__title">Вишиванка блакитного кольору з рослинним орнаментом Fialka</h5>
+                                    <p class="product-card__price">3 400 грн.</p>
+                                </div>
                             </div>
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="season-spring">
-                                <label class="form-check-label checkbox__label" for="season-spring">
-                                    весна
-                                </label>
+                        </div>
+                        <div class="col">
+                            <div class="product-card">
+                                <div class="product-card__img-container">
+                                    <img src="/img/product-nezalezhni.jpg" class="product-card__img" alt="...">
+                                    <img src="/img/product-lito-hover.jpg" class="product-card__img product-card__img-hover" alt="...">
+                                    <img src="/img/plp-product-bg.jpg" class="product-card__bg" alt="...">
+                                </div>
+                                <div class="product-card__body">
+                                    <h5 class="product-card__title">Лляна вишиванка з геометричним орнаментом Nezalezhni</h5>
+                                    <p class="product-card__price">4 200 грн.</p>
+                                </div>
                             </div>
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="season-summer">
-                                <label class="form-check-label checkbox__label" for="season-summer">
-                                    літо
-                                </label>
+                        </div>
+                        <div class="col">
+                            <div class="product-card">
+                                <div class="product-card__img-container">
+                                    <img src="/img/product-kashtan.jpg" class="product-card__img" alt="...">
+                                    <img src="/img/product-lito-hover.jpg" class="product-card__img product-card__img-hover" alt="...">
+                                    <img src="/img/plp-product-bg.jpg" class="product-card__bg" alt="...">
+                                </div>
+                                <div class="product-card__body">
+                                    <h5 class="product-card__title">Вишиванка з рослинним орнаментом Kashtan</h5>
+                                    <p class="product-card__price">3 800 грн.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-card">
+                                <div class="product-card__img-container">
+                                    <img src="/img/product-indi.jpg" class="product-card__img" alt="...">
+                                    <img src="/img/product-lito-hover.jpg" class="product-card__img product-card__img-hover" alt="...">
+                                    <img src="/img/plp-product-bg.jpg" class="product-card__bg" alt="...">
+                                </div>
+                                <div class="product-card__body">
+                                    <h5 class="product-card__title">Легка блузка вільного крою з орнаментом Indi</h5>
+                                    <p class="product-card__price">3 800 грн.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="product-card">
+                                <div class="product-card__img-container">
+                                    <img src="/img/product-svitanok.jpg" class="product-card__img" alt="...">
+                                    <img src="/img/product-lito-hover.jpg" class="product-card__img product-card__img-hover" alt="...">
+                                    <img src="/img/plp-product-bg.jpg" class="product-card__bg" alt="...">
+                                </div>
+                                <div class="product-card__body">
+                                    <h5 class="product-card__title">Біла вишиванка вільного крою Svitanok</h5>
+                                    <p class="product-card__price">2 980 грн.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item filter__accordion-item">
-                    <h2 class="accordion-header filter__accordion-item-header" id="panelsStayOpen-headingFour">
-                        <button class="accordion-button filter__accordion-item-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
-                            Тканина
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
-                        <div class="accordion-body filter__accordion-body">
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="fabric-linen">
-                                <label class="form-check-label checkbox__label" for="fabric-linen">
-                                    льон
-                                </label>
-                            </div>
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="fabric-hemp">
-                                <label class="form-check-label checkbox__label" for="fabric-hemp">
-                                    конопляне полотно
-                                </label>
-                            </div>
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="fabric-polyester">
-                                <label class="form-check-label checkbox__label" for="fabric-polyester">
-                                    поліестер
-                                </label>
-                            </div>
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="fabric-cotton">
-                                <label class="form-check-label checkbox__label" for="fabric-cotton">
-                                    бавовна
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item filter__accordion-item">
-                    <h2 class="accordion-header filter__accordion-item-header" id="panelsStayOpen-headingFive">
-                        <button class="accordion-button filter__accordion-item-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="true" aria-controls="panelsStayOpen-collapseFive">
-                            Рукав
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
-                        <div class="accordion-body filter__accordion-body">
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="sleeve-no">
-                                <label class="form-check-label checkbox__label" for="sleeve-no">
-                                    без рукава
-                                </label>
-                            </div>
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="sleeve-frilled">
-                                <label class="form-check-label checkbox__label" for="sleeve-frilled">
-                                    з оборкою
-                                </label>
-                            </div>
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="sleeve-inline">
-                                <label class="form-check-label checkbox__label" for="sleeve-inline">
-                                    втачний
-                                </label>
-                            </div>
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="sleeve-reglan">
-                                <label class="form-check-label checkbox__label" for="sleeve-reglan">
-                                    реглан
-                                </label>
-                            </div>
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="sleeve-bell">
-                                <label class="form-check-label checkbox__label" for="sleeve-bell">
-                                    колокол
-                                </label>
-                            </div>
-                            <div class="form-check checkbox">
-                                <input class="form-check-input checkbox__selector" type="checkbox" value="" id="sleeve-flashlight">
-                                <label class="form-check-label checkbox__label" for="sleeve-flashlight">
-                                    ліхтарик
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+                    <footer class="products__foooter">
+                        <button class="button button__with-icon icon__reload" type="button">Показати більше</button>
+                        <nav aria-label="page navigation" class="products__pagination">
+                            <ul class="products__pagination-list">
+                                <li class="products__pagination-item">
+                                    <a class="products__pagination-link products__pagination-link-disabled" href="#">1</a>
+                                </li>
+                                <li class="products__pagination-item">
+                                    <a class="products__pagination-link" href="#">2</a>
+                                </li>
+                                <li class="products__pagination-item">
+                                    <a class="products__pagination-link" href="#">3</a>
+                                </li>
+                                <li class="products__pagination-item">
+                                    <a class="products__pagination-link" href="#">...</a>
+                                </li>
+                                <li class="products__pagination-item">
+                                    <a class="products__pagination-link" href="#">6</a>
+                                </li>
+                                <li class="products__pagination-item">
+                                    <a class="products__pagination-link" href="#">Наступна</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </footer>
                 </div>
             </div>
-        </div>
-      <div class="col-10">
-        <header>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            <h1>Жіночі вишиванки</h1>
-        </header>
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-                <div class="card product-card">
-                    <img src="/img/product-lito.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Вишиванка з рослинним орнаментом Lito</h5>
-                        <p class="card-text">2 800 грн.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card product-card">
-                    <img src="/img/product-lito.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Вишиванка з рослинним орнаментом Lito</h5>
-                        <p class="card-text">2 800 грн.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card product-card">
-                    <img src="/img/product-lito.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Вишиванка з рослинним орнаментом Lito</h5>
-                        <p class="card-text">2 800 грн.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card product-card">
-                    <img src="/img/product-lito.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Вишиванка з рослинним орнаментом Lito</h5>
-                        <p class="card-text">2 800 грн.</p>
-                    </div>
-                </div>
-            </div>
-          </div>
-        <footer>
-            <button type="button" class="btn btn-link">Link</button>
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
-              </nav>
-        </footer>
-      </div>
-      </div>
-      </section>
+        </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
+        <footer class="container-fluid footer">
+            <a class="footer__scroll icon__arrow" href="#"></a>
+            <div class="footer__logo">
+                <img class="footer__logo-img" src="/img/logo.svg" alt="Etnodim online shop">
+            </div>
+            <nav class="row footer__nav">
+                <ul class="col-1 col-sm-4 footer__section">
+                    <li class="footer__item">
+                        <a class="footer__link" href="">Про нас</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="">Команда</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="">Блог</a>
+                    </li>
+                    <li class="footer__item footer__item-highlight">
+                        <a class="footer__link footer__link-highlight" href="">Drabyna</a>
+                    </li>
+                </ul>
+                <ul class="col-4 col-sm-4 footer__section">
+                    <li class="footer__item">
+                        <a class="footer__link" href="">Цікава інформація</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="">Вакансії</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="">Доставка та оплата</a>
+                    </li>
+                    <li class="footer__item footer__item-highlight">
+                        <a class="footer__link footer__link-highlight" href="">Етнодім Маніфест</a>
+                    </li>
+                </ul>
+                <ul class="col-4 footer__section footer__section-contacts">
+                    <li class="footer__item">
+                        <a class="footer__link footer__link-underline" href="">Контакти</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="tel:+380978889292">+38 097 888 92 92</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="">Україна, м. Київ, вул. Верхній Вал 58/28</a>
+                    </li>
+                    <li class="footer__item">
+                        <p class="footer__workinghours">пн-пт 10:00-20:00</p>
+                        <p class="footer__workinghours">сб-нд 11:00-19:00</p>
+                    </li>
+                </ul>
+                <ul class="col-3 col-sm-4 footer__section">
+                    <li class="footer__item">
+                        <a class="footer__link footer__link-underline" href="">Соціальні мережі</a>
+                    </li>
+                    <li class="footer__social">
+                        <a class="footer__social-link icon__facebook" href="#"></a>
+                        <a class="footer__social-link icon__youtube" href="#"></a>
+                        <a class="footer__social-link icon__mail" href="#"></a>
+                        <a class="footer__social-link icon__pinterest" href="#"></a>
+                        <a class="footer__social-link icon__instagram" href="#"></a>
+                    </li>
+                    <li class="footer__item">
+                        <p class="footer__copywriting">© «Етнодім» 2009-2021</p>
+                    </li>
+                </ul>
+                <ul class="col-4 col-sm-12 footer__section m-footer__section-contacts">
+                    <li class="footer__item">
+                        <a class="footer__link footer__link-underline" href="">Контакти</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="tel:+380978889292">+38 097 888 92 92</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="">Україна, м. Київ, вул. Верхній Вал 58/28</a>
+                    </li>
+                    <li class="footer__item">
+                        <p class="footer__workinghours">пн-пт 10:00-20:00</p>
+                        <p class="footer__workinghours">сб-нд 11:00-19:00</p>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+
+
+        <script src="https://unpkg.com/auto-resize-custom-select"></script>
+        <script>
+            customSelect();
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </body>
 </html>

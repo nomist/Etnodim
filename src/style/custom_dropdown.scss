@@ -1,0 +1,75 @@
+@import '_colors.scss';
+@import '_mixins.scss';
+
+.custom-dropdown {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__label {
+        @include text-note;
+        margin: 0;
+        color: $black;
+        position: relative;
+        padding: 5px 16px 5px 0px;
+
+        &::before {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        }
+    }
+
+    &__content {
+        display: none;
+        box-sizing: border-box;
+        position: absolute;
+        background: $white;
+        height: auto;
+        width: 350px;
+        top: 35px;
+        left: 0;
+        z-index: 1;
+    }
+
+    &__content-filter {
+        height: 505px;
+        width: 350px;
+        padding: 10px;
+        box-shadow: 6px 6px 8px rgba(179, 179, 179, 0.25), 4px 4px 6px rgba(135, 135, 135, 0.25);
+    }
+
+    &__trigger {
+        top:0;
+        opacity:0;
+        display:block;
+        padding:0;
+        margin:0;
+        border:0;
+        position:absolute;
+        height:100%;
+        width:100%;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:checked:after {
+            display: block;
+        }
+
+        &:checked ~ .custom-dropdown__content {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .custom-dropdown {
+        display: flex;
+    }
+}

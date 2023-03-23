@@ -1,0 +1,79 @@
+@import '_mixins.scss';
+@import '_varicons.scss';
+
+.icon__search {
+    &::before {
+        @include icon;
+        background: $search;
+    }
+}
+
+.icon__chevron {
+    &::before {
+        @include icon;
+        background: $chevron;
+    }
+}
+
+.icon__cart {
+    &::before {
+        @include icon;
+        background: $cart;
+    }
+}
+
+.icon__burger {
+    &::before {
+        @include icon;
+        background: $burger;
+    }
+}
+
+.icon__reload {
+    &::before {
+        @include icon;
+        background: $reload;
+    }
+}
+
+.icon__facebook {
+    &::before {
+        @include icon;
+        background: $facebook;
+    }
+}
+
+.icon__youtube {
+    &::before {
+        @include icon;
+        background: $youtube;
+    }
+}
+
+.icon__mail {
+    &::before {
+        @include icon;
+        background: $mail;
+    }
+}
+
+.icon__pinterest {
+    &::before {
+        @include icon;
+        background: $pinterest;
+    }
+}
+
+.icon__instagram {
+    &::before {
+        @include icon;
+        background: $instagram;
+    }
+}
+
+.icon__arrow {
+    &::before {
+        @include icon;
+        background: $arrow;
+    }
+}

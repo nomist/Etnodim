@@ -3,7 +3,7 @@
 
 .checkbox {
 
-    margin-bottom: 0px;
+    margin: 5px 0;
 
     &__selector[type=checkbox] {
         border: 1px solid $gray-dark;
@@ -21,6 +21,7 @@
 
     &__label {
         @include text-note;
+        user-select: none; 
         color: $black;
     }
 }

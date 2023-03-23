@@ -1,0 +1,33 @@
+@import '_colors.scss';
+@import '_mixins.scss';
+
+.plp {
+    &__header {
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    &__title {
+        @include text-title;
+        color: $black;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .plp {
+        &__header {
+            flex-wrap: wrap-reverse;
+        }
+        &__title {
+            @include text-title(24px);
+            width: 100%;
+            text-align: right;
+        }
+    }
+}

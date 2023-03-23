@@ -1,0 +1,14 @@
+@import '_colors.scss';
+@import '_mixins.scss';
+
+.sorting {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    &__label {
+        @include text-note;
+        color: $black;
+        flex-shrink: 0;
+    }
+}

@@ -1,0 +1,62 @@
+@import '_colors.scss';
+@import '_mixins.scss';
+
+.product-card {
+
+    &__body {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    &__title {
+        @include text-paragraph;
+        margin: 0 0 5px;
+        color: $black;
+    }
+
+    &__price {
+        @include text-paragraph-bold;
+        margin: 0;
+        color: $black;
+    }
+
+    &__img-container {
+        max-width: 100vw;
+        max-height: 100vw;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: scale(100%);
+        transition: ease-in 300ms;
+        object-fit: cover;
+    }
+
+    &__img-hover {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover {
+
+        .product-card__img {
+            opacity: 0;
+        }
+
+        .product-card__img-hover {
+            opacity: 1;
+            display: inline-block;
+            transform: scale(80%);
+        }
+    }
+}
